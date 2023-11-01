@@ -1,1 +1,41 @@
-asd
+name: Deploy Blog Img
+
+on:
+  push:
+    branches:
+      - main
+
+env: # 设置环境变量
+  TZ: Asia/Shanghai # 时区（设置时区可使页面中的`最近更新时间`使用该时区时间）
+
+# 任务
+jobs:
+  build-and-deploy:
+    # 服务器环境：最新版 Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      # 拉取代码
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          # "最近更新时间"等 git 日志相关信息，需要拉取全部提交记录
+          fetch-depth: 0
+
+      # 使用action安装node环境
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      # 生成视频文件名字数组
+      - name: filesName
+        run: node ../../utils/main.js
+
+        # Deploy to another repo
+      - name: Deploy
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: git@github.com:ckhr516/ckhr516.github.io.git
+          BRANCH: main
+          FOLDER: utils/filesName
+          SSH_PRIVATE_KEY: ${{ secrets.ACCESS_TOKEN }}

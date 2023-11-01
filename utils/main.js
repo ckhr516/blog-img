@@ -7,7 +7,7 @@ files.forEach((file) => {
   if (suffix === "mp4") filesName.unshift(fileArr[0])
 })
 
-fs.writeFile('utils/filesName/names.json', JSON.stringify(filesName), function (err) {
+fs.writeFile('utils/filesName/filesName.json', JSON.stringify(filesName), function (err) {
   if (err) {
     console.log("写入失败" + err);
   } else {
