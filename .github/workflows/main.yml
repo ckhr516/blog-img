@@ -38,4 +38,4 @@ jobs:
           REPO: git@github.com:ckhr516/ckhr516.github.io.git
           BRANCH: main
           FOLDER: utils/filesName
-          SSH_PRIVATE_KEY: ${{ secrets.ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
