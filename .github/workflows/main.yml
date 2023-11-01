@@ -29,7 +29,7 @@ jobs:
 
       # 生成视频文件名字数组
       - name: filesName
-        run: node ../../utils/main.js
+        run: node utils/main.js
 
         # Deploy to another repo
       - name: Deploy
