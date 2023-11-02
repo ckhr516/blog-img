@@ -31,17 +31,11 @@ jobs:
       - name: filesName
         run: node utils/main.js
 
-      # # Deploy
-      # - name: run deploy.sh
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-      #   run: bash utils/deploy.sh
-
-      # 部署到 GitHub Pages
+      # 部署到 blog github
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
           repository-name: ckhr516/ckhr516.github.io
           branch: test # 部署到的分支
-          folder: utils/filesName # vuepress 生成的静态文件存放的地方
+          folder: utils/json # vuepress 生成的静态文件存放的地方
