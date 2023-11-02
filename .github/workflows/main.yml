@@ -44,4 +44,4 @@ jobs:
           token: ${{ secrets.ACCESS_TOKEN }}
           repository-name: ckhr516/ckhr516.github.io
           branch: test # 部署到的分支
-          folder: utils/filesName/filesName.json # vuepress 生成的静态文件存放的地方
+          folder: utils/filesName # vuepress 生成的静态文件存放的地方
