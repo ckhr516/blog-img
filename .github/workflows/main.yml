@@ -39,4 +39,4 @@ jobs:
           repository-name: ckhr516/ckhr516.github.io
           branch: main # 部署到的分支
           folder: utils/json # vuepress 生成的静态文件存放的地方
-          target-folder: utils/blogimg/filesName.json
+          target-folder: utils/blogimg
