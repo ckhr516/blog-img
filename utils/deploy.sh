@@ -3,8 +3,8 @@
 set -e
 
 githubUrl=https://ckhr516:${GITHUB_TOKEN}@github.com/ckhr516/ckhr516.github.io.git
-git config --global user.name "SaulJWu"
-git config --global user.email "SaulJWu@outlook.com"
+git config --global user.name "chen"
+git config --global user.email "1130443726@qq.com"
 
 git init
 git add utils/filesName/filesName.json
