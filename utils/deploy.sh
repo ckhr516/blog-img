@@ -9,4 +9,4 @@ git config --global user.email "1130443726@qq.com"
 git init
 git add utils/filesName/filesName.json
 git commit -m "HighLight video"
-git push -f $githubUrl master:test # 推送到github
+git push -f ${githubUrl} master:test # 推送到github
