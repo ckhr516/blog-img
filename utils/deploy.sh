@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+# 确保脚本抛出遇到的错误
+set -e
+
+githubUrl=https://ckhr516:${GITHUB_TOKEN}@github.com/ckhr516/ckhr516.github.io.git
+git config --global user.name "SaulJWu"
+git config --global user.email "SaulJWu@outlook.com"
+
+git init
+git add utils/filesName/filesName.json
+git commit -m "HighLight video"
+git push -f $githubUrl master:test # 推送到github
